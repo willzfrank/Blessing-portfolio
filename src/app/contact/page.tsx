@@ -1,4 +1,30 @@
-'use client'
+export const metadata = {
+  title: 'Contact | Blessing Francis Portfolio',
+  description:
+    'Contact Blessing Francis for design, branding, and development inquiries. Get in touch today!',
+  openGraph: {
+    title: 'Contact | Blessing Francis Portfolio',
+    description:
+      'Contact Blessing Francis for design, branding, and development inquiries. Get in touch today!',
+    url: 'https://blessing-francis.vercel.app/contact',
+    images: [
+      {
+        url: '/favicon.ico',
+        width: 1200,
+        height: 630,
+        alt: 'Blessing Francis Portfolio',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact | Blessing Francis Portfolio',
+    description:
+      'Contact Blessing Francis for design, branding, and development inquiries. Get in touch today!',
+    images: ['/favicon.ico'],
+  },
+}
+;('use client')
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
@@ -13,7 +39,12 @@ export default function Contact() {
   }
 
   return (
-    <main className="max-w-xl mx-auto py-16 px-4">
+    <main
+      id="main-content"
+      role="main"
+      aria-label="Contact content"
+      className="max-w-xl mx-auto py-16 px-4"
+    >
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

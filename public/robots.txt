@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://blessing-francis.vercel.app/sitemap.xml 

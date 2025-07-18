@@ -1,5 +1,32 @@
 'use client'
 
+export const metadata = {
+  title: 'Home | Blessing Francis Portfolio',
+  description:
+    'Welcome to the portfolio of Blessing Francis – creative professional in design and branding. Discover projects, services, and contact info.',
+  openGraph: {
+    title: 'Home | Blessing Francis Portfolio',
+    description:
+      'Welcome to the portfolio of Blessing Francis – creative professional in design and branding. Discover projects, services, and contact info.',
+    url: 'https://blessing-francis.vercel.app',
+    images: [
+      {
+        url: '/favicon.ico',
+        width: 1200,
+        height: 630,
+        alt: 'Blessing Francis Portfolio',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Home | Blessing Francis Portfolio',
+    description:
+      'Welcome to the portfolio of Blessing Francis – creative professional in design and branding. Discover projects, services, and contact info.',
+    images: ['/favicon.ico'],
+  },
+}
+
 import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react'
 import { useEffect, useState } from 'react'
@@ -33,7 +60,12 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex flex-col items-center min-h-[70vh] w-full bg-gray-50 dark:bg-neutral-900 pt-12">
+    <main
+      id="main-content"
+      role="main"
+      aria-label="Main content"
+      className="flex flex-col items-center min-h-[70vh] w-full bg-gray-50 dark:bg-neutral-900 pt-12"
+    >
       <section className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-8 px-10 pb-12 border-b border-black/10 dark:border-white/10">
         {/* Left: Brand, Name, Contact, Social */}
         <div className="flex-1 flex flex-col gap-6 justify-center min-w-[320px]">
@@ -63,10 +95,12 @@ export default function Home() {
                 href={s.href}
                 className="flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 bg-transparent hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors p-2 w-11 h-11"
                 title={s.title}
+                aria-label={s.title + ' profile'}
               >
                 <Icon
                   icon={s.icon}
                   className="text-neutral-700 dark:text-neutral-300 w-5 h-5"
+                  aria-hidden="true"
                 />
               </a>
             ))}

@@ -25,7 +25,12 @@ const projects = [
 
 export default function Projects() {
   return (
-    <main className="max-w-4xl mx-auto py-16 px-4">
+    <main
+      id="main-content"
+      role="main"
+      aria-label="Projects content"
+      className="max-w-4xl mx-auto py-16 px-4"
+    >
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
